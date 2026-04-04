@@ -67,7 +67,7 @@ Open `http://localhost:5173/` to interact with the prototypes!
 ## Key File Structure
 * `src/App.jsx`: The main dashboard overlay and React state logic.
 * `src/components/AvatarScene.jsx`: This is the main 3D engine for 'Prototype 2.' It loads the 3D files, displays them on the screen, and makes sure the character movements transition smoothly.
-* `src/services/commandParser.js`: Our AI parsing pipeline that strictly limits the LLM to outputting operational JSON.
+* `src/services/commandParser.js`: AI parsing pipeline that strictly limits the LLM to outputting operational JSON.
 * `public/models/`: Contains the 3D models (`idle.glb`) and animation tracks (`walk.glb`, `wave.glb`) used to construct the interactive sequences.
 
 ## Limitations & Next Steps
