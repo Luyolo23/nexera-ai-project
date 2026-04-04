@@ -17,11 +17,6 @@ function App() {
 
   const avatarRef = useRef(null);
 
-  const modelMap = {
-    helmet: "/models/helmet.glb",
-    astronaut: "/models/astronaut.glb",
-  };
-
   function mapToKnownObject(text) {
     if (!text) return null;
     text = text.toLowerCase();

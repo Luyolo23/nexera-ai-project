@@ -225,7 +225,9 @@ const AvatarScene = forwardRef((props, ref) => {
       if (mountRef.current && rendererRef.current?.domElement) {
         try {
           mountRef.current.removeChild(rendererRef.current.domElement);
-        } catch (e) {}
+        } catch (e) {
+            console.debug("Ignored cleanup error:", e)
+        }
       }
       if (walkTimeoutRef.current) clearTimeout(walkTimeoutRef.current);
     };
