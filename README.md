@@ -8,7 +8,7 @@ This repository contains two interactive prototypes demonstrating how AI and Web
    A workflow that accepts natural language inputs (or image uploads via simulated metadata mapping) to retrieve, process, scale, and render educational 3D models in the browser, complete with a context-aware AI summary.
    
 2. **AI-Driven Interactive Avatar Coaching**  
-   A foundational architecture for an AI learning coach. Natural language commands are parsed into strict semantic JSON, which triggers an interactive 3D humanoid avatar. The avatar utilizes a `THREE.AnimationMixer` to dynamically blend skeletal animations (Idle, Walk, Wave) while reacting to spatial targets in the environment (e.g., walking toward the table).
+   A foundational architecture for an AI learning coach. Natural language commands are parsed into strict semantic JSON, which triggers an interactive 3D humanoid avatar. The avatar utilizes a `THREE.AnimationMixer` to dynamically blend skeletal animations (Idle, Walk, Wave) while reacting to a target in the environment e.g walking toward the table.
 
 ---
 
