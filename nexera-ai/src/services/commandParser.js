@@ -83,6 +83,7 @@ Examples:
         target: parsed.target || "none",
       };
     } catch (parseError) {
+      console.warn("JSON parse failed after cleaning:", parseError);
       return { action: "idle", target: "none" };
     }
   } catch (err) {

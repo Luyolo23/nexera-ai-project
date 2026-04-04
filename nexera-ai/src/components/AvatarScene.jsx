@@ -71,8 +71,9 @@ const AvatarScene = forwardRef((props, ref) => {
   }));
 
   useEffect(() => {
-    if (mountRef.current) {
-      mountRef.current.innerHTML = "";
+    const currentMount = mountRef.current;
+    if (currentMount) {
+      currentMount.innerHTML = "";
     }
 
     const scene = new THREE.Scene();
@@ -90,7 +91,8 @@ const AvatarScene = forwardRef((props, ref) => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    mountRef.current.appendChild(renderer.domElement);
+
+    if (currentMount) currentMount.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -222,9 +224,9 @@ const AvatarScene = forwardRef((props, ref) => {
       if (rendererRef.current) {
         rendererRef.current.dispose();
       }
-      if (mountRef.current && rendererRef.current?.domElement) {
+      if (currentMount && rendererRef.current?.domElement) {
         try {
-          mountRef.current.removeChild(rendererRef.current.domElement);
+          currentMount.removeChild(rendererRef.current.domElement);
         } catch (e) {
             console.debug("Ignored cleanup error:", e)
         }
